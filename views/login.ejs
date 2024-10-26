@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+    background: url(https://cdn.pixabay.com/photo/2016/10/21/13/01/satellite-1757979_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure body takes full height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.2); /* Corrected rgba syntax */
+    height: auto; /* Adjust height to fit content */
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 10px 0 5px; /* Add margin for spacing */
+    font-weight: bold; /* Make labels bold */
+    color: gray; /* Change label color */
+}
+
+input {
+    width: 400px;
+    padding: 10px; /* Add padding for input */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Rounded corners for input */
+}
+
+button {
+    margin-top: 15px; /* Add margin for spacing */
+    padding: 10px; /* Add padding for button */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Change cursor on hover */
+    width: 100px;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+a {
+    margin-top: 15px; /* Add margin for spacing */
+    text-align: center; /* Center the link */
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.cen{
+    display: flex;
+    flex-direction: column;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="/login" method="post">
+        <div class="cen">
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="password">
+        </div>
+        <button >Login</button>
+    </form>
+    <a href="/signup">Don't have an account yet? Signup</a>
+    </div>
+</body>
+</html>

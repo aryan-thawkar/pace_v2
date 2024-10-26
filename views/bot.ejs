@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA PACE Satellite Chatbot</title>
+    <!-- <link rel="stylesheet" href="/styles.css"> -->
+    <style>
+        body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.chat-messages {
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+    border-bottom: 1px solid #e1e1e1;
+    height: 300px;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.user {
+    background-color: #d1e7dd;
+    align-self: flex-end;
+}
+
+.bot {
+    background-color: #f8d7da;
+    align-self: flex-start;
+}
+
+.user-input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #e1e1e1;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>NASA PACE Satellite Chatbot</h1>
+        <div id="messages" class="chat-messages"></div>
+        <div class="user-input-container">
+            <input type="text" id="userInput" placeholder="Ask me anything about the NASA PACE satellite..." />
+            <button onclick="getResponse()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const botReplies = {
+    "what is the nasa pace satellite": "The NASA PACE satellite studies ocean ecosystems and atmospheric particles to understand climate impacts.",
+    "what kind of data does it collect": "PACE collects data on ocean color, atmospheric particles, and cloud properties.",
+    "how is pace useful for climate studies": "PACE helps scientists understand the Earth's climate system by monitoring oceans and aerosols.",
+    "how does the pace satellite work": "PACE uses specialized sensors to capture high-resolution images and data on ocean color, aerosols, and clouds.",
+    "why is studying ocean color important": "Ocean color helps scientists track phytoplankton, which are critical to marine ecosystems and the global carbon cycle.",
+    "what is aerosol data": "Aerosol data includes information on particles in the atmosphere, like dust and pollutants, which impact climate and air quality.",
+    "can pace help with weather forecasting": "While PACE isn't a weather satellite, its data on aerosols and clouds can contribute to better climate and environmental forecasts.",
+    "where is the pace satellite located": "PACE orbits the Earth from space, collecting global data from a distance of approximately 705 kilometers.",
+    "what does pace stand for": "PACE stands for Plankton, Aerosol, Cloud, ocean Ecosystem, reflecting the satellite's focus areas.",
+    "when was pace launched": "NASA plans to launch the PACE satellite in early 2024, expanding our ability to monitor ocean and atmospheric health.",
+    "how can i access pace data": "PACE data will be available to the public through NASA's Earthdata platform after the satellite's launch.",
+    "who operates the pace satellite": "NASA's Goddard Space Flight Center is responsible for operating and managing the PACE satellite mission.",
+    "what other missions are related to pace": "PACE complements missions like MODIS and VIIRS, which also monitor Earth's oceans and atmosphere.",
+    "what sensors are on the pace satellite": "PACE includes sensors like the Ocean Color Instrument (OCI) and two polarimeters for atmospheric studies.",
+    "what are polarimeters": "Polarimeters measure the polarization of light, helping to distinguish between types of particles in the atmosphere.",
+    "how it works": "The PACE satellite works by using advanced sensors to capture light reflected from the Earth's surface, analyzing ocean color, aerosols, and clouds to understand various environmental factors.",
+    "tools used by pace satellite": "PACE uses tools like the Ocean Color Instrument (OCI) to capture detailed images of ocean ecosystems and polarimeters to study atmospheric particles.",
+    "what are the blind spots of satellite": "Blind spots for the PACE satellite mainly occur in areas with cloud cover, which can obscure the surface and reduce data quality for certain measurements.",
+    "what is its speed": "The PACE satellite orbits Earth at an approximate speed of 7.5 kilometers per second, allowing it to complete one orbit in about 90 minutes.",
+    "how are aerosols related to climate change and global warming": "This is a very complicated question, and is explained in more detail in reports by the Intergovernmental Panel on Climate Change (IPCC) and others. However, as a basic overview, as light from the sun enters the earth's atmosphere, aerosols scatter the Sun's light, which results in a local cooling effect. However, some aerosols also absorb light, which can result in a local warming effect, depending on the amount of aerosols, their altitude, and the brightness of the underlying (Earth's) surface at the place in question. The net direct effect of this scattering and absorption by aerosols is cooling when averaged across the globe. This means that aerosols have offset part of the positive forcing (warming) due to greenhouse gases such as carbon dioxide (CO2). However, because the lifetimes of aerosols in the atmosphere are very short compared to greenhouse gases, and because aerosols vary a lot over time and from place to place, it is not correct to say that aerosols cancel out the effects of greenhouse gases. Additionally, aerosols can have complex influences on cloud formation and evolution, which further modify the Earth's energy balance.",
+    "what are clouds made of": "Clouds are formed when water vapor in the atmosphere condenses. Dependent on factors such as the temperature, they may be formed of liquid water droplets, ice crystals, or a mixture of both.",
+    "what are aerosols and why are they important": "Aerosols are small particles suspended in the atmosphere. Some are natural and some are human-derived. Examples are smoke from fires, dust from deserts, volcanic ash from eruptions, and urban haze from industrial activities. We are interested in them for reasons including climate change, health and air quality, hazard monitoring, ecology, and more.",
+    "why do we want to measure clouds from space": "Monitoring Earth's cloudiness from space is useful for many reasons. Two of the most important are for providing input to weather forecasts and for climate monitoring purposes. Clouds reflect the Sun's visible light and can trap Earth's emitted thermal radiation, so changing the cover and properties of clouds can affect the Earth's energy balance.",
+    "are aerosols related to spray cans": "Yes and no. The dictionary definition of aerosols applies to both - small particles suspended in a gas. While the contents of some spray cans could contribute to your home's 'aerosol conditions' at times, spray cans are not considered to be a big source of the aerosols that we study in the Earth's atmosphere.",
+    "how can you measure aerosols from space": "We typically study aerosols using data collected by instruments mounted on Earth-looking space satellites. These instruments record the amount of sunlight reflected from the Earth's surface and from the atmosphere. As aerosols scatter and absorb the sun's radiation, they affect the brightness and color (wavelengths of light) of these observations. We can use information from multiple colors of wavelengths, and measurements taken from different angles and/or polarization states of light, to determine the characteristics of aerosols and what is happening on the land/ocean below.",
+    "who are you":"I am a Robonaut, a bot created by team CixCodeCrushers, I can answer all your question related to PACE."
+};
+
+// Normalize function to clean up user input
+function normalizeInput(input) {
+    return input.toLowerCase().trim().replace(/[?.,!]/g, "");
+}
+
+// Function to handle user input and get bot response
+function getResponse() {
+    let userInput = document.getElementById("userInput").value;
+    userInput = normalizeInput(userInput);  // Normalize the user input
+    const messages = document.getElementById("messages");
+
+    // Display user message
+    const userMessage = document.createElement("div");
+    userMessage.className = "message user";
+    userMessage.innerHTML = "You: " + userInput;
+    messages.appendChild(userMessage);
+
+    // Find bot response or default reply
+    const botMessage = document.createElement("div");
+    botMessage.className = "message bot";
+    botMessage.innerHTML = "Bot: " + (botReplies[userInput] || "I'm not sure about that. We will update you!!");
+    messages.appendChild(botMessage);
+
+    // Clear input and scroll to bottom
+    document.getElementById("userInput").value = "";
+    messages.scrollTop = messages.scrollHeight;
+}
+
+    </script>
+</body>
+</html>

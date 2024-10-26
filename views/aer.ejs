@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerosols Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg");
+        }
+        
+        .centered-heading {
+            position: absolute; /* Position the heading absolutely */
+            top: 20px; /* Move it down from the top of the page */
+            left: 50%; /* Move it to the middle of the page horizontally */
+            transform: translateX(-50%); /* Center it horizontally using transform */
+            color: #ffffff; /* Change the text color to white for visibility */
+            text-align: center; /* Center the text */
+            font-size: 2em; /* Adjust the font size as needed */
+        }
+        
+        .container {
+            display: flex;
+            width: 80%;
+            height: 80%; /* Adjusted to give more height to the container */
+        }
+        
+        .image-box {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Stack image and button vertically */
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.3); /* Translucent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cloud-image {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px; /* Add margin below the image */
+        }
+        
+        .info-button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        
+        .info-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        
+        .info-box {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+            background-color: rgba(255, 255, 255, 0.3); /* Translucent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(16, 10, 10, 0.2);
+            height: 100%; /* Makes the info box stretch to fill the container height */
+            color: white; /* Change text color to white */
+        }
+        
+        .info-box h1 {
+            color: #0077be; /* Ocean blue color */
+        }
+        
+        .scrollable-content {
+            height: 100%; /* Make the content area stretch to fill the info box */
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding-right: 10px; /* Add some padding to the right */
+        }
+        
+        h1 {
+            margin-bottom: 15px;
+            color: #34495e; /* Darker color for heading text */
+        }
+</style>        
+</head>
+<body>
+    <h1 class="centered-heading">Aerosols</h1>
+    <div class="container">
+        <div class="image-box">
+            <img src="https://assets.science.nasa.gov/content/dam/science/esd/eo/content-feature/aerosols/images/beijing_amo_2010282.jpg" alt="Cloud" class="cloud-image">
+            <a href="https://pace.oceansciences.org/learn_aerosols_clouds.htm#:~:text=PACE%20will%20provide%20estimates%20of,and%20every%20ecosystem%20in%20between." target="_blank" class="info-button">Visit NASA Aerosols Info Site</a> <!-- Button added here -->
+        </div>
+        <div class="info-box">
+            <h1>Aerosols Information</h1>
+            <div class="scrollable-content">
+            
+                <p>Aerosols are small particles suspended in the atmosphere. Some are natural and some are human-derived. Examples are smoke from fires, dust from deserts, volcanic ash from eruptions, and urban haze from industrial activities. We are interested in them for reasons including climate change, health and air quality, hazard monitoring, ecology, and more.
+                </p>
+                <p>Aerosols are small particles suspended in the atmosphere. They are often not or barely visible to the human eye, yet their impact on climate, weather, health, and ecology are significant. This page introduces the various major types of aerosols, and explains why researching them is important.</p>
+
+                    <p>Aerosols range in size from a few tens of nanometers—less than the width of the smallest viruses—to several tens of micrometers—about the diameter of human hair. The size and composition of aerosol particles affects how far they can travel around the world, their interactions with solar and thermal radiation, and their potential effects on health. Aerosols injected into the atmosphere directly are known as 'primary aerosols'. Sea spray, mineral dust, smoke, and volcanic ash are all primary aerosols. Secondary aerosols are aerosols which were emitted in another form (e.g. gases), then become aerosol particles after going through chemical reactions in the atmosphere, such as sulfate aerosols from volcanoes or industrial emissions. All aerosols can also undergo further chemical changes, referred to as ‘aging effects’. Some more information about these various aerosol types is given below.</p>
+                
+                <p>Aerosols can be found in the air over oceans, deserts, mountains, forests, ice, and every ecosystem in between. They drift in Earth's atmosphere from the stratosphere to the surface and range in size from a few nanometers to several tens of micrometers. One of the PACE polarimeters will be focused on characterizing aerosols in the atmosphere.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

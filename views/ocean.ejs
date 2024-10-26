@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg");
+        }
+        
+        .centered-heading {
+            position: absolute; /* Position the heading absolutely */
+            top: 20px; /* Move it down from the top of the page */
+            left: 50%; /* Move it to the middle of the page horizontally */
+            transform: translateX(-50%); /* Center it horizontally using transform */
+            color: #ffffff; /* Change the text color to white for visibility */
+            text-align: center; /* Center the text */
+            font-size: 2em; /* Adjust the font size as needed */
+        }
+        
+        .container {
+            display: flex;
+            width: 80%;
+            height: 80%; /* Adjusted to give more height to the container */
+        }
+        
+        .image-box {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Stack image and button vertically */
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.3); /* Translucent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cloud-image {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px; /* Add margin below the image */
+        }
+        
+        .info-button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        
+        .info-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        
+        .info-box {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+            background-color: rgba(255, 255, 255, 0.3); /* Translucent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(16, 10, 10, 0.2);
+            height: 100%; /* Makes the info box stretch to fill the container height */
+            color: white; /* Change text color to white */
+        }
+        
+        .info-box h1 {
+            color: #0077be; /* Ocean blue color */
+        }
+        
+        .scrollable-content {
+            height: 100%; /* Make the content area stretch to fill the info box */
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding-right: 10px; /* Add some padding to the right */
+        }
+        
+        h1 {
+            margin-bottom: 15px;
+            color: #34495e; /* Darker color for heading text */
+        }
+</style>        
+</head>
+<body>
+    <h1 class="centered-heading">Ocean</h1>
+    <div class="container">
+        <div class="image-box">
+            <img src="https://oceanographic.s3.eu-west-1.amazonaws.com/wp-content/uploads/2021/11/01083329/nasa-WKT3TE5AQu0-unsplash-scaled-e1635843224815.jpg" alt="Cloud" class="cloud-image">
+            <a href="https://earth.gsfc.nasa.gov/ocean" target="_blank" class="info-button">Visit NASA Ocean Info Site</a> <!-- Button added here -->
+        </div>
+        <div class="info-box">
+            <h1>Ocean Information</h1>
+            <div class="scrollable-content">
+            
+                <p>Ocean Ecology conducts research on ocean ecosystems and the interactions between Earth's chemical cycles and life. The laboratory also manages “ocean color” data from NASA satellite sensors. Sediment, dissolved chemicals, and marine microorganisms called phytoplankton affect the colors of sunlight reflected off the ocean, providing a way to monitor ocean ecosystems from orbit.</p>
+
+                <p>The staff works to ensure the accuracy of ocean-color data and make it available to users across the world. Scientists use the data to study fundamental issues such as the global distribution of phytoplankton, the storage of carbon in the ocean, and the role of the oceans in climate change. Personnel also participate in research cruises in collaboration with other researchers funded by NASA and assist NASA Headquarters in developing future earth-observing missions.</p
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

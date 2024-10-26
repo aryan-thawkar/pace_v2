@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACE Satellite Quiz</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .options li input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .options li:hover {
+            background-color: #444;
+        }
+
+        .selected {
+            background-color: gray !important;
+        }
+
+        .correct {
+            background-color: green !important;
+            color: #fff;
+        }
+
+        .incorrect {
+            background-color: red !important;
+            color: #fff;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .ac{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        
+        .ac3 img{
+            position: sticky;
+            top: 300px;
+            left: 800px;
+        }
+
+        .ac1 img{
+            position: sticky;
+            top: 52px;
+            left: 800px;
+            width: 400px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="ac">
+        <div class="ac1 acc">
+            <img src="https://static.wixstatic.com/media/c22c23_d4a3e103764b464499a90fda1dd71676~mv2.webp/v1/fill/w_569,h_935,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/new%20astro.webp" alt="">
+        </div>
+        <div class="ac2 acc">
+            <h1>PACE Satellite Quiz</h1>
+
+            <div class="quiz-container">
+                <form id="quizForm">
+                    <!-- Question 1 -->
+                    <div class="question">
+                        <p>1. What is the primary mission of the PACE satellite?</p>
+                        <ul class="options">
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>A) To monitor solar activity
+                            </li>
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>B) To study ocean color, aerosols, and clouds
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) To map the Earth's gravitational field
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) To measure atmospheric carbon levels
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question">
+                        <p>2. Which organization is responsible for launching the PACE satellite?</p>
+                        <ul class="options">
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>A) ESA
+                            </li>
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>B) NASA
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) ISRO
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) JAXA
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question">
+                        <p>3. What does the acronym PACE stand for?</p>
+                        <ul class="options">
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>A) Plankton, Aerosol, Climate, and Environment
+                            </li>
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>B) Plankton, Aerosol, Cloud, and Ecosystem
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) Planetary Atmosphere and Climate Exploration
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) Photon and Cloud Exploration
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question">
+                        <p>4. What type of sensor is used by the PACE satellite to study ocean color?</p>
+                        <ul class="options">
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>A) Lidar
+                            </li>
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>B) Hyperspectral radiometer
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) Microwave imager
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) Infrared spectrometer
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question">
+                        <p>5. How will the PACE satellite help improve climate models?</p>
+                        <ul class="options">
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>A) By tracking land temperature
+                            </li>
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>B) By providing better data on aerosols and cloud
+                                interactions
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) By monitoring oceanic and atmospheric carbon dioxide
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) By mapping volcanic eruptions
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="question">
+                        <p>6. PACE is designed to study ocean biology. What important indicator will it monitor in
+                            oceans?</p>
+                        <ul class="options">
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>A) Ocean salinity
+                            </li>
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>B) Chlorophyll concentration
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) Tidal movements
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) Marine biodiversity
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="question">
+                        <p>7. Which instrument onboard PACE is specifically designed for aerosol monitoring?</p>
+                        <ul class="options">
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>A) SPEXone
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>B) MODIS
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) VIIRS
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) CALIPSO
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="question">
+                        <p>8. What is the projected launch year of the PACE satellite?</p>
+                        <ul class="options">
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>A) 2022
+                            </li>
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>B) 2024
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) 2026
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) 2028
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="question">
+                        <p>9. How does PACE contribute to the study of global carbon cycles?</p>
+                        <ul class="options">
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>A) By measuring CO2 levels directly
+                            </li>
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>B) By observing phytoplankton, which absorb carbon
+                                dioxide
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) By tracking emissions from industries
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) By monitoring forest carbon absorption
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="question">
+                        <p>10. PACE satellite data can be used for which of the following applications?</p>
+                        <ul class="options">
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>A) Predicting earthquakes
+                            </li>
+                            <li data-answer="correct">
+                                <input type="checkbox" disabled>B) Monitoring air quality
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>C) Measuring wind patterns
+                            </li>
+                            <li data-answer="incorrect">
+                                <input type="checkbox" disabled>D) Studying seismic waves
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="button" id="submitBtn">Submit</button>
+                </form>
+
+                <div class="result" id="resultDisplay"></div>
+            </div>
+        </div>
+        <div class="ac3 acc">
+            <img src="https://static.wixstatic.com/media/c22c23_920452cbe0a742da8b9898c50f6bc8f2~mv2.webp/v1/fill/w_476,h_209,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Artboard%201dsdasdasdasd.webp" alt="">
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            const questions = document.querySelectorAll('.question');
+            let score = 0;
+
+            questions.forEach((question) => {
+                const selectedOption = question.querySelector('.options li.selected');
+                if (selectedOption) {
+                    const isCorrect = selectedOption.getAttribute('data-answer') === 'correct';
+                    selectedOption.querySelector('input[type="checkbox"]').checked = true;
+                    if (isCorrect) {
+                        selectedOption.classList.add('correct');
+                        score++;
+                    } else {
+                        selectedOption.classList.add('incorrect');
+                    }
+                }
+
+                // Show the correct answer
+                question.querySelectorAll('.options li').forEach(option => {
+                    if (option.getAttribute('data-answer') === 'correct') {
+                        option.classList.add('correct');
+                    }
+                });
+            });
+
+            // Display result in the resultDisplay div
+            const resultDisplay = document.getElementById('resultDisplay');
+            resultDisplay.textContent = 'Your score is: ' + score + '/' + questions.length;
+        });
+
+        document.querySelectorAll('.options li').forEach((option) => {
+            option.addEventListener('click', function () {
+                const siblings = this.parentNode.querySelectorAll('li');
+                siblings.forEach(sib => {
+                    sib.classList.remove('selected');
+                    sib.querySelector('input[type="checkbox"]').checked = false; // Uncheck others
+                });
+                this.classList.add('selected');
+                this.querySelector('input[type="checkbox"]').checked = true; // Check selected option
+            });
+        });
+    </script>
+</body>
+
+</html>

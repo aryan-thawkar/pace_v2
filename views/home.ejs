@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PACE</title>
+  <!-- <link rel="stylesheet" href="/homepage.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Zen+Dots&display=swap" rel="stylesheet">
+
+
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color : white;
+}
+
+.ovel{
+  background: url(https://eoimages.gsfc.nasa.gov/images/imagerecords/51000/51765/BarentsSea_amo_2011226_lrg.jpg);
+    /* border: 2px solid red; */
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    height: 90vh;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+
+}
+
+body,html {
+    margin: 0;
+    font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+    background: #000;
+  }
+  ul { 
+    margin: 0px auto 0; 
+    padding: 0; 
+    list-style: none; 
+    display: table;
+    width: 600px;
+    text-align: center;
+  }
+  li { 
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+  }
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  @media screen and (max-height: 300px) {
+      ul {
+          margin-top: 40px;
+      }
+  }
+  
+
+.logo {
+    padding-bottom: 126px;
+    width: 290px;
+    margin: auto;
+
+}
+
+
+.logo img {
+    width: 290px;
+    margin: auto;
+}
+
+.title {
+    
+        margin: auto;
+        font-family: "Russo One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
+      
+}
+
+.rocket{
+    width: 150px;
+    margin:  1px auto;
+}
+
+.gif{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gif video {
+    width: 600px;
+    margin: 90px auto; 
+    margin-bottom: 0px;
+
+    
+}
+ .nasalogo {
+    width: 200px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+ }
+
+ .nasalogo2 {
+  width: 140px;
+  position: absolute;
+  right: 40px;
+}
+
+
+ .para {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pcen{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 0px auto
+}
+
+.pcen p{
+    margin: 10px;
+    font-size: 25px;
+}
+
+.quotes{
+    border: 2px solid red;
+    width: 70vw;
+    padding: 7px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+ @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.fouropt {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #000000;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+}
+
+.contain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 450px;
+  gap: 10px;
+
+  >  div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-of-type(1) {
+      background: url("https://palomarbioproject.weebly.com/uploads/6/0/7/3/60735835/3837797_orig.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(2) {
+      background: url("https://earth.gsfc.nasa.gov/sites/default/files/lab_climate/jamie_dust_cropped_resized.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(3) {
+      background: url("https://images.pexels.com/photos/11360677/pexels-photo-11360677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(4) {
+      background: url("https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg")
+        no-repeat 50% / cover;
+    }
+
+    .cont {
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.676) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translatey(100%);
+      transition: opacity 0.3s ease-in-out, transform 0.3s 0.2s;
+      visibility: hidden;
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+    }
+
+    &:hover {
+      flex: 0 0 250px;
+      box-shadow: 1px 3px 15px #3d3d3d;
+      transform: translatey(-30px);
+    }
+
+    &:hover .cont {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
+  }
+}
+
+
+.fouroptheading {
+  font-size: 28px;
+  margin: 10px auto;
+  margin-top: 50px;
+
+    font-family: "Russo One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+
+/* videos */
+
+.HPvid1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.HPvid1 video{
+  width: 500 px;
+}
+
+
+body {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  background-color: black;
+}
+
+.idisplay {
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin: 40px auto;
+  margin-bottom: 150px;
+  color: white;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  text-align: center;
+  padding: 10px; /* Increased padding for centering */
+}
+
+.image-gallery img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.description {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #727272;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  font-size: 16px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.secvid{
+  display: flex;
+  width: 80vw;
+}
+.secvid div{
+  width: 45%;
+}
+
+.secvid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+  padding: 10px;
+  max-width: 1000px;
+  margin: 10px auto;
+}
+
+.video-box {
+  flex: 1; /* Allow the video box to grow */
+  margin-right: 20px; /* Space between video and text */
+}
+
+.video-box video {
+  width: 100%; /* Make video responsive */
+  border-radius: 8px; /* Rounded corners for the video */
+}
+
+.text-box {
+  flex: 1; /* Allow the text box to grow */
+  padding: 5px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.text-box p {
+  margin: 0; /* Remove default margin */
+  font-size: 2em; /* Text size */
+  color: #ffffff; /* Text color */
+  font-family: futura-lt-w01-book, futura-lt-w05-book, sans-serif;
+}
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+  <div class="ovel">
+
+    <ul>
+
+      <img class="nasalogo"
+        src="https://lh3.googleusercontent.com/pw/AP1GczP0n-T0p1juoG0zbV6nCLjSWgwOcvAY9ADNBOBTjEDxUAiDBJSOUcfLe9_JtmitpoJUnFL4M8Os8IABIOG5SNuOYGvOlf0bdAJX-6cAnLuXPLn7f-4Xkhce48bsmOrFeO_U4uSBugs31FyMIRMHYNvC=w900-h700-s-no-gm"
+        alt="">
+      <img class="nasalogo2" src="/removebg-preview.png" alt="">
+      <li><a href="/globe">Globe</a></li>
+      <li><a href="/quiz">Quiz</a></li>
+      <li><a href="/bot">Chatbot</a></li>
+      <li><a href="#">Game</a></li>
+    </ul>
+
+    <div class="logo">
+      <img
+        src="https://lh3.googleusercontent.com/pw/AP1GczMvGKOTN4_b_Ci2QrRT32E2vUqX6TSkFf1-OUgrjOJV7ayPMeBdB0KoTWrDfLGNSwvF2brNfrPa3Jpj0Oc5_BmYTYzIxPNYSZa20w_CO4oCjIVa6LJQEvIwVOLg4x246j1I1nMEg8d-jthSKAPsLVdC=w888-h888-s-no-gm"
+        alt="">
+
+    </div>
+    <div class="title"> Plankton, Aerosol, Cloud, Ocean Ecosystem
+    </div>
+    <!-- <img src="" alt="" class="rocket"> -->
+    <div class="gif">
+      <video src="https://pace.oceansciences.org/movies/pace_rotate_sm.mp4" autoplay muted loop></video>
+    </div>
+
+    <div class="para">
+      <div class="pcen">
+        <p>The PACE mission will significantly enhance our understanding of the complex interactions between the ocean
+          and atmosphere, particularly in carbon dioxide exchange. By providing high-resolution data, it will reveal how
+          the ocean functions as a vital carbon sink, helping mitigate climate change. Additionally, PACE will
+          investigate the role of aerosols in promoting phytoplankton growth, which plays a crucial role in the marine
+          food web. This knowledge will pave the way for better predictions of marine ecosystem health.</p>
+        <p>Beyond scientific advancements, PACE data will have practical applications for society and the economy. One
+          key benefit will be improved monitoring of harmful algal blooms, which can threaten marine life and public
+          health. By identifying the extent and duration of these blooms, PACE will empower communities to take timely
+          action and protect their coastal environments. Ultimately, PACE will extend NASA legacy of Earth observation,
+          equipping us with essential tools to sustain our planet for future generations</p>
+      </div>
+      <p class="quotes">
+
+        It's a mission that's exciting
+        because PACE makes the invisible visible !
+      </p>
+    </div>
+
+
+    <div class="fouroptheading">
+      <h3>CLICK TO EXPLORE !</h3>
+    </div>
+
+    <div class="fouropt">
+      <div class="contain">
+        <div>
+          <div class="cont">
+            <h2><a href="/ph">Plankton</a></h2>
+            <span>Plankton are tiny organisms that drift through the ocean</span>
+          </div>
+        </div>
+        <div>
+          <div class="cont">
+            <h2><a href="/aer">Aerosol</a></h2>
+            <span>Aerosols are tiny particles suspended in the atmosphere</span>
+          </div>
+        </div>
+        <div>
+          <div class="cont">
+            <h2><a href="/cloud">Cloud</a></h2>
+            <span>Clouds are key components of weather systems and the water cycle</span>
+          </div>
+        </div>
+        <div>
+          <div class="cont">
+            <h2><a href="/ocean">Ocean</a></h2>
+            <span>The ocean is a critical component of Earth's climate system</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="secvid">
+  <div class="video-box">
+    <video controls src="https://pace.oceansciences.org/movies/geos_visible_720p_2x_H264_high.mp4"></video>
+  </div>
+  <div class="text-box">
+    <p>Collect global observations of aerosol and cloud properties, focusing on reducing the largest uncertainties in climate and radiative forcing models of the Earth system.</p>
+  </div>
+</div>
+
+<div class="secvid">
+  <div class="text-box">
+    <p>Extend key systematic ocean biological, ecological, and biogeochemical climate data records and cloud and aerosol climate records.</p>
+  </div>
+  <div class="video-box">
+    <video controls src="https://pace.oceansciences.org/movies/pace_in_orbit.mp4"></video>
+  </div>
+</div>
+
+<div class="secvid">
+  <div class="video-box">
+    <video controls src="https://pace.oceansciences.org/movies/20_years_color_converted.mp4"></video>
+  </div>
+  <div class="text-box">
+    <p>Make new global measurements of ocean color to improve our understanding of the carbon cycle and ocean ecosystem responses to a changing climate.</p>
+  </div>
+</div>
+
+
+
+
+
+    <div class="idisplay">
+      <h1>WHY DO WE NEED PACE?</h1>
+      <div class="image-gallery">
+        <div class="image-item">
+          <img src="https://pace.oceansciences.org/images/tabs-01.png" alt="Image 1" onclick="showDescription(0)">
+          <div class="image-caption">OCEAN ECOLOGY</div>
+        </div>
+        <div class="image-item">
+          <img src="https://pace.oceansciences.org/images/tabs-02.png" alt="Image 2" onclick="showDescription(1)">
+          <div class="image-caption">AEROSOLS & CLOUDS</div>
+        </div>
+        <div class="image-item">
+          <img src="https://pace.oceansciences.org/images/tabs-03.png" alt="Image 3" onclick="showDescription(2)">
+          <div class="image-caption">CARBON </div>
+        </div>
+        <div class="image-item">
+          <img src="https://pace.oceansciences.org/images/tabs-04.png" alt="Image 4" onclick="showDescription(3)">
+          <div class="image-caption">APPLIED SCIENCE</div>
+        </div>
+        <div class="image-item">
+          <img src="https://pace.oceansciences.org/images/tabs-05.png" alt="Image 5" onclick="showDescription(4)">
+          <div class="image-caption">ECONOMY & SOCIETY</div>
+        </div>
+      </div>
+      <p class="description" id="description">
+        Click an image to see more details.
+      </p>
+    </div>
+
+
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon_item"><a class="social-icon_link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li class="social-icon_item"><a class="social-icon_link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li class="social-icon_item"><a class="social-icon_link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon_item"><a class="social-icon_link" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+      </ul>
+      <ul class="menu">
+        <li class="menu_item"><a class="menu_link" href="">Home</a></li>
+        <li class="menu_item"><a class="menu_link" href="">About</a></li>
+        <li class="menu_item"><a class="menu_link" href="">Services</a></li>
+        <li class="menu_item"><a class="menu_link" href="">Team</a></li>
+        <li class="menu_item"><a class="menu_link" href="">Contact</a></li>
+  
+      </ul>
+      <p>&copy;Team CixCodeCrusher</p>
+    </footer>
+
+
+    
+
+</body>
+
+<script>
+  // Array to hold descriptions for each image
+  const descriptions = [
+    "Our ocean teems with life and many of its most vital species are invisible to us. Like on land, the ocean has deserts, forests, meadows, and jungles, providing habitats for many forms of life. The types of life in these habitats is determined by microscopic algae that float in our ocean. Known as phytoplankton, these tiny organisms come in many different shapes, sizes, and colors. The diversity of phytoplankton types determines the roles they play in ocean habitats. It also determines how well they capture energy from the sun and carbon from the atmosphere.",
+    "Small particles suspended in the atmosphere are known as aerosols. Along with clouds, they affect how sunlight is reflected and absorbed by the Earth and its atmosphere. Aerosols and clouds can interact in complex ways, which are not well understood. For example, cloud drops can form on aerosols and aerosols can be washed out of the air by rain. The overall effect of aerosols and clouds on climate is quite uncertain.",
+    "Carbon exists in forms that range from invisible gases to diamonds. Most life on earth is composed of carbon, as well. In the ocean, a system of physical and biological processes drives the transition between forms of carbon. This system supports life and regulates our planet's livable environment. A key process in the carbon system is photosynthesis and its key players are phytoplankton. These tiny plants and algae convert carbon dioxide gas into organic matter. This organic matter, in turn, supplies food and energy to most life forms in the food web.",
+    "The PACE mission will provide a combination of global atmospheric and oceanic observations to benefit society in the areas of water resources, impact of disasters, ecological forecasting, human health, and air quality.PACE Applications will partner with public and private organizations on ways to apply data from PACE and its scientific findings in their decision-making activities and services, helping to improve the quality of life and strengthen the economy.",
+    "The U.S. ocean economy contributes over $350B to the GDP (2014) and supports more than 3.1 million jobs (one in 45). Currently, this ocean economy, including the Great Lakes, is growing faster than the total U.S. economy in both contributions to inflation-adjusted GDP (15.6% since 2007 compared to 5.8%) and jobs (8.1% compared to flat). PACE will be the first mission to provide measurements that enable prediction of the boom-bust of fisheries, the appearance of harmful algae, and other factors that affect commercial and recreational industries"
+  ];
+
+  // Function to display the description based on the clicked image
+  function showDescription(index) {
+    document.getElementById("description").innerText = descriptions[index];
+  }
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>

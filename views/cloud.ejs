@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg");
+        }
+        
+        .centered-heading {
+            position: absolute; /* Position the heading absolutely */
+            top: 20px; /* Move it down from the top of the page */
+            left: 50%; /* Move it to the middle of the page horizontally */
+            transform: translateX(-50%); /* Center it horizontally using transform */
+            color: #ffffff; /* Change the text color to white for visibility */
+            text-align: center; /* Center the text */
+            font-size: 2em; /* Adjust the font size as needed */
+        }
+        
+        .container {
+            display: flex;
+            width: 80%;
+            height: 80%; /* Adjusted to give more height to the container */
+        }
+        
+        .image-box {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Stack image and button vertically */
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.3); /* Translucent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cloud-image {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px; /* Add margin below the image */
+        }
+        
+        .info-button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        
+        .info-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        
+        .info-box {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+            background-color: rgba(255, 255, 255, 0.3); /* Translucent white background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(16, 10, 10, 0.2);
+            height: 100%; /* Makes the info box stretch to fill the container height */
+            color: white; /* Change text color to white */
+        }
+        
+        .info-box h1 {
+            color: #0077be; /* Ocean blue color */
+        }
+        
+        .scrollable-content {
+            height: 100%; /* Make the content area stretch to fill the info box */
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding-right: 10px; /* Add some padding to the right */
+        }
+        
+        h1 {
+            margin-bottom: 15px;
+            color: #34495e; /* Darker color for heading text */
+        }
+</style>        
+</head>
+<body>
+    <h1 class="centered-heading">Clouds</h1>
+    <div class="container">
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/2114014/pexels-photo-2114014.jpeg?cs=srgb&amp;dl=pexels-magda-ehlers-pexels-2114014.jpg&amp;fm=jpg" alt="Cloud" class="cloud-image">
+            <a href="https://pace.oceansciences.org/learn_aerosols_clouds.htm#:~:text=PACE%20will%20provide%20estimates%20of,and%20every%20ecosystem%20in%20between." target="_blank" class="info-button">Visit NASA Cloud Info Site</a> <!-- Button added here -->
+        </div>
+        <div class="info-box">
+            <h1>Cloud Information</h1>
+            <div class="scrollable-content">
+            
+                <p>There are many different types of clouds, categorized based on their appearance and altitude. Common types include:</p>
+                <ul>
+                    <li>Cumulus: Fluffy, white clouds with a flat base.</li>
+                    <li>Stratus: Layered clouds that cover the sky like a blanket.</li>
+                    <li>Cumulonimbus: Tall, towering clouds associated with thunderstorms.</li>
+                    <li>Cirrus: Thin, wispy clouds high in the atmosphere.</li>
+                </ul>
+                <p>Clouds play a crucial role in the Earth's weather and climate systems, reflecting sunlight and affecting temperature and precipitation patterns.</p>
+                <p>Additional information about clouds includes:</p>
+                <p>Clouds can also affect climate by influencing the amount of solar radiation reaching the Earth's surface. Their reflective properties can help cool the planet, while their greenhouse effect can help retain heat. Understanding cloud dynamics is essential for weather forecasting and climate studies.</p>
+                <p>Clouds are also critical for the water cycle, as they transport moisture across the globe and contribute to precipitation, which replenishes freshwater sources.</p>
+                <p>Clouds (masses of water drops or ice crystals suspended in the atmosphere) and aerosols (tiny, airborne solid and liquid particles) play important roles in Earth's climate and interact with each other, and the ocean, in complex ways.</p>
+                
+               
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
